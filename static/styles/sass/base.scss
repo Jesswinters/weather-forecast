@@ -1,17 +1,14 @@
 body {
   width: 100%;
-  height: 100vh;
   font-family: $font-body;
   font-size: $font-body-size;
-  background: linear-gradient( 135deg, $color-light-blue 10%, $color-blue 100%) fixed;
 }
 
-.App {
+.site-container {
   position: relative;
-  display: flex;
-  flex-direction: column;
   width: 100%;
   min-height: 100vh;
+  background: linear-gradient( 135deg, $color-light-blue 10%, $color-blue 100%) fixed;
 }
 
 .site-content {

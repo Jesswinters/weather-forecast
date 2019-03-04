@@ -6,5 +6,8 @@ import { render } from 'react-dom';
 import WeatherForecast from './components/main/weather-forecast.jsx';
 
 $(document).ready(() => {
-  render(<WeatherForecast />, document.getElementById('content'));
+  render(
+    <WeatherForecast />,
+    document.getElementById('App')
+  );
 });

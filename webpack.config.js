@@ -11,23 +11,37 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          presets: [ 'es2015', 'react', 'stage-0' ]
-      }
+          presets: [
+            'es2015',
+            'react'
+          ]
+        }
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        loaders: ["style", "css", "sass"]
+        loaders: [
+          'style',
+          'css',
+          'sass'
+        ]
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        loaders: ["style", "css"]
+        loaders: [
+          'style',
+          'css'
+        ]
       }
-  ]
+    ]
   },
   devtool: 'source-maps',
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: [
+      '',
+      '.js',
+      '.jsx'
+    ]
   }
 };

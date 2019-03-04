@@ -63,7 +63,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	(0, _jquery2.default)(document).ready(function () {
-	  (0, _reactDom.render)(_react2.default.createElement(_weatherForecast2.default, null), document.getElementById('content'));
+	  (0, _reactDom.render)(_react2.default.createElement(_weatherForecast2.default, null), document.getElementById('App'));
 	});
 	
 	// Components
@@ -35553,7 +35553,7 @@
 	
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'main-app' },
+	        { className: 'site-container' },
 	        _react2.default.createElement(_Header2.default, {
 	          location: location,
 	          getCurrentPosition: this.getCurrentPosition,

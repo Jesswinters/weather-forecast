@@ -10,11 +10,3 @@
     @media screen and (min-width: $min) { @content; }
   }
 }
-
-// Centerer mixin
-@mixin centerer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}

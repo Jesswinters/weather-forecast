@@ -77,7 +77,7 @@ class WeatherForecast extends Component {
     ) : this.state.location;
 
     return (
-      <div className="main-app">
+      <div className="site-container">
         <Header
           location={location}
           getCurrentPosition={this.getCurrentPosition}
