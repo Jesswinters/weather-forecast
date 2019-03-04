@@ -1,0 +1,24 @@
+#forecast-success {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - #{$space-x-small * 2});
+  padding: $space-x-small;
+  text-align: center;
+  color: $color-white;
+  background: $color-green;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+
+  &.fade {
+    opacity: 0;
+  }
+}
+
+.search-error {
+  position: absolute;
+  margin-top: $space-xx-small;
+  margin-left: $space-x-medium;
+  font-size: $font-body-size-smaller;
+  color: $color-red;
+}

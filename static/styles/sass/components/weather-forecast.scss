@@ -1,0 +1,55 @@
+.forecast-main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.forecast-index--container {
+  margin-top: $space-x-large;
+  text-align: center;
+
+  @include media($min: $bp-large) {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+
+.forecast-index {
+  margin-top: $space-xx-large;
+
+  @include media($max: $bp-large) {
+    display: inline-block;
+    margin: $space-small $space-x-medium;
+  }
+}
+
+.forecast-index--card {
+  display: inline-block;
+  max-width: calc(340px - #{$space-x-large});
+  margin-bottom: $space-medium;
+}
+
+.forecast-index--name {
+  margin-bottom: $space-small;
+  font-family: $font-heading;
+  text-align: center;
+}
+
+.weather-icon--container {
+  background: currentColor;
+  border-radius: $space-xxx-small;
+}
+
+.weather-info--container {
+  margin-top: $space-small;
+  text-align: center;
+}
+
+.weather-info--item {
+  display: block;
+  margin-bottom: $space-xx-small;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

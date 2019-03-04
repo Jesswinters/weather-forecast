@@ -1,0 +1,180 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@font-face {
+  font-family: 'CircularStd-Book';
+  src: url("../fonts/CircularStd-Book.eot");
+  src: url("../fonts/CircularStd-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-Book.woff") format("woff"), url("../fonts/CircularStd-Book.ttf") format("truetype"), url("../fonts/CircularStd-Book.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'CircularStd-BookItalic';
+  src: url("../fonts/CircularStd-BookItalic.eot");
+  src: url("../fonts/CircularStd-BookItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-BookItalic.woff") format("woff"), url("../fonts/CircularStd-BookItalic.ttf") format("truetype"), url("../fonts/CircularStd-BookItalic.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'CircularStd-Bold';
+  src: url("../fonts/CircularStd-Bold.eot");
+  src: url("../fonts/CircularStd-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-Bold.woff") format("woff"), url("../fonts/CircularStd-Bold.ttf") format("truetype"), url("../fonts/CircularStd-Bold.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
+  font-weight: 600; }
+
+@font-face {
+  font-family: 'CircularStd-BoldItalic';
+  src: url("../fonts/CircularStd-BoldItalic.eot");
+  src: url("../fonts/CircularStd-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-BoldItalic.woff") format("woff"), url("../fonts/CircularStd-BoldItalic.ttf") format("truetype"), url("../fonts/CircularStd-BoldItalic.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
+  font-weight: 600;
+  font-style: italic; }
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "CircularStd-Book";
+  font-size: 16px;
+  background: linear-gradient(135deg, #ABDCFF 10%, #0396FF 100%) fixed; }
+
+.App {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh; }
+
+.site-content {
+  flex: 1 0 auto;
+  padding: 2rem; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-family: "CircularStd-Bold";
+  color: #002661; }
+  @media screen and (max-width: 719px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      text-align: center; } }
+
+#forecast-success {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 1.5rem);
+  padding: 0.75rem;
+  text-align: center;
+  color: #ffffff;
+  background: #5FB572;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out; }
+  #forecast-success.fade {
+    opacity: 0; }
+
+.search-error {
+  position: absolute;
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+  font-size: 14px;
+  color: #DE0E53; }
+
+.site-header {
+  position: relative;
+  width: calc(100% - 2rem);
+  padding: 1rem 1rem 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+  @media screen and (min-width: 720px) {
+    .site-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      width: calc(100% - 4rem);
+      padding: 1.25rem 2rem 2rem; } }
+  .site-header h2 {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    margin-left: 1rem; }
+    @media screen and (max-width: 719px) {
+      .site-header h2 {
+        font-size: 20px; } }
+
+.site-header--nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end; }
+  @media screen and (max-width: 374px) {
+    .site-header--nav {
+      align-items: center; } }
+  @media screen and (max-width: 719px) {
+    .site-header--nav {
+      justify-content: center; } }
+
+.loading-location--text {
+  display: block;
+  margin-bottom: 0.25rem; }
+
+.search-bar {
+  margin-left: 0.75rem; }
+  @media screen and (max-width: 719px) {
+    .search-bar {
+      width: 100%;
+      margin-top: 1rem; }
+      .search-bar .MuiFormControl-root-136 {
+        width: 300px; } }
+  @media screen and (max-width: 374px) {
+    .search-bar .MuiFormControl-root-136 {
+      width: 225px; } }
+
+.pac-container:after {
+  background-image: none !important;
+  height: 0px; }
+
+.pac-icon {
+  background-image: none !important; }
+
+.forecast-main {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.forecast-index--container {
+  margin-top: 2rem;
+  text-align: center; }
+  @media screen and (min-width: 1024px) {
+    .forecast-index--container {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly; } }
+
+.forecast-index {
+  margin-top: 3.125rem; }
+  @media screen and (max-width: 1023px) {
+    .forecast-index {
+      display: inline-block;
+      margin: 1rem 1.5rem; } }
+
+.forecast-index--card {
+  display: inline-block;
+  max-width: calc(340px - 2rem);
+  margin-bottom: 1.25rem; }
+
+.forecast-index--name {
+  margin-bottom: 1rem;
+  font-family: "CircularStd-Bold";
+  text-align: center; }
+
+.weather-icon--container {
+  background: currentColor;
+  border-radius: 0.25rem; }
+
+.weather-info--container {
+  margin-top: 1rem;
+  text-align: center; }
+
+.weather-info--item {
+  display: block;
+  margin-bottom: 0.5rem; }
+  .weather-info--item:last-child {
+    margin-bottom: 0; }

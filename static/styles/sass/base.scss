@@ -1,0 +1,34 @@
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: $font-body;
+  font-size: $font-body-size;
+  background: linear-gradient( 135deg, $color-light-blue 10%, $color-blue 100%) fixed;
+}
+
+.App {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.site-content {
+  flex: 1 0 auto;
+  padding: $space-x-large;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-family: $font-heading;
+  color: $color-dark-blue;
+
+  @include media($max: $bp-small) {
+    text-align: center;
+  }
+}

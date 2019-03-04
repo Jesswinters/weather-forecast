@@ -1,0 +1,45 @@
+{
+  "name": "weather-forecast",
+  "version": "1.0.0",
+  "description": "A 5-day weather forecast single page app",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build-css && webpack",
+    "build-css": "node-sass static/styles/sass/main.scss static/styles/css/main.css",
+    "watch-css": "node-sass static/styles/sass/main.scss static/styles/css/main.css -w"
+  },
+  "author": "Jessica Winters",
+  "license": "ISC",
+  "jshintConfig": {
+    "esnext": true
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.3",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "eventemitter3": "^1.1.1",
+    "express": "^4.13.4",
+    "flux": "^2.1.1",
+    "jquery": "^3.3.1",
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.18.10",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.14"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

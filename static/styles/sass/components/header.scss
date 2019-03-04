@@ -1,0 +1,75 @@
+.site-header {
+  position: relative;
+  width: calc(100% - #{$space-small * 2});
+  padding: $space-small $space-small $space-x-large;
+  background: linear-gradient(135deg, $color-lightest-gray 0%, $color-light-gray 100%);
+
+  @include media($min: $bp-small) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: calc(100% - #{$space-x-large * 2});
+    padding: $space-medium $space-x-large $space-x-large;
+  }
+
+  h2 {
+    display: inline-block;
+    margin-bottom: $space-xxx-small;
+    margin-left: $space-small;
+
+    @include media($max: $bp-small) {
+      font-size: $font-medium-size;
+    }
+  }
+}
+
+.site-header--nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  @include media($max: $bp-xs) {
+    align-items: center;
+  }
+
+  @include media($max: $bp-small) {
+    justify-content: center;
+  }
+}
+
+.loading-location--text {
+  display: block;
+  margin-bottom: $space-xxx-small;
+}
+
+.search-bar {
+  margin-left: $space-x-small;
+
+  @include media($max: $bp-small) {
+    width: 100%;
+    margin-top: $space-small;
+
+    .MuiFormControl-root-136 {
+      width: 300px;
+    }
+  }
+
+  @include media($max: $bp-xs) {
+    .MuiFormControl-root-136 {
+      width: 225px;
+    }
+  }
+}
+
+// Remove 'powered by Google' logo from autocomplete list
+.pac-container {
+  &:after {
+    background-image: none !important;
+    height: 0px;
+  }
+}
+
+// Remove marker icons from autcomplete list items
+.pac-icon {
+  background-image: none !important;
+}
